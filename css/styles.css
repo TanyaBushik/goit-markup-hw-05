@@ -385,7 +385,6 @@ letter-spacing: 0.03em;
 text-transform: uppercase;
 color: var(--main-background-color);
 background-color:  rgba(47, 48, 58, 0.8);
-
 }
 
 /*-----------Command-----------*/
@@ -621,7 +620,7 @@ visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 position: absolute;
 top: 50%;
 left: 50%;
-transform: translate(-50%, -50%) scaleY(1);
+transform: translate(-50%, -50%) scaleY(1) rotate(0);
 
 width: 528px;
 min-height: 581px;
@@ -638,7 +637,7 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: none;
 }
 .backdrop.is-hidden.modal {
-transform: translate(-50%, -50%) scaleY(0);
+transform: translate(-50%, -50%) scaleY(0) rotate(-180deg);
 }
 
 .modal-close-button {
