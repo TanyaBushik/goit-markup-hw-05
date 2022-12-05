@@ -143,6 +143,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .header-contacts {
  display: flex;
  margin-left: auto;
+ align-items: center;
 }
 
 .header-contacts .item + .item {
@@ -150,7 +151,8 @@ margin-left: 50px;
 }
 
 .header-contacts .link {
-display: block;
+display: flex;
+align-items: center;
 padding-top: 32px;
 padding-bottom: 32px;
 
@@ -510,7 +512,7 @@ margin-right: var(--margin-between-items);
 }
 
 
-/* ------CONTACTS------*/
+/*--Footer--*/
 footer {
 background-color: var(--hero-background-color);
 padding: 60px 0;
@@ -544,10 +546,11 @@ margin-top: 20px;
 }
 
 .contacts-email,
-.contacts-phone,
-.contacts-address
+.contacts-phone
  {
 color: rgba(255, 255, 255, 0.6);
+
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts-address {
 color: var(--main-background-color);
@@ -555,6 +558,17 @@ color: var(--main-background-color);
 
 .contacts-item:not(:last-child) {
 margin-bottom: 9px;
+}
+
+
+.contacts-email:hover,
+.contacts-email:focus {
+color: var(--accent-blue);
+}
+
+.contacts-phone:hover,
+.contacts-phone:focus {
+  color: var(--accent-blue);
 }
 
 .footer-soc-text {
@@ -626,7 +640,6 @@ width: 528px;
 min-height: 581px;
 box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 border-radius: 4px;
-padding: 40px;
 background-color: var(--main-background-color);
 
 transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -636,7 +649,7 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   visibility: hidden;
   pointer-events: none;
 }
-.backdrop.is-hidden.modal {
+.is-hidden .modal {
 transform: translate(-50%, -50%) scaleY(0) rotate(-180deg);
 }
 
@@ -646,6 +659,8 @@ right: 8px;
 top: 8px;
 background: var(--main-background-color);
 border: 1px solid rgba(0, 0, 0, 0.1);
+width: 30px;
+height: 30px;
 border-radius: 50%;
 display: flex;
 align-items: center;
@@ -770,12 +785,5 @@ border-left: 1px solid #EEEEEE;
 border-bottom: 1px solid #EEEEEE;
 border-right: 1px solid #EEEEEE;
 width: 370px;
-}
-
-/*--Footer--*/
-
-.contacts-email:hover,
-.contacts-email:focus {
-color: var(--accent-blue);
 }
 
